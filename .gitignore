@@ -1,0 +1,16 @@
+# Python environment and generated files
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# Local databases and logs
+db.sqlite3
+*.log
+
+# macOS files
+.DS_Store
