@@ -83,7 +83,8 @@ DATABASES = {
         "HOST": "127.0.0.1",
         "PORT": "3306",
         "OPTIONS": {
-            "charset": "utf8mb4",
+            "charset": "utf8mb4", #uft8 only supports up to 3 bytes per character. 
+            #That being said if I used that some characters wouldn't work.
         },
     }
 }
