@@ -1,0 +1,46 @@
+# HanziFlow Development Log — October 21, 2026
+
+## Goal
+Set up the development environment and establish the foundation for the HanziFlow web application while practicing the setup steps myself.
+
+## Completed
+- Created the HanziFlow project folder and opened it in Visual Studio Code.
+- Created and activated a Python virtual environment (`.venv`) and selected it as VS Code’s Python interpreter.
+- Installed Django 5.2.18 and created the project with a `config` configuration folder.
+- Started the local development server and verified that Django’s welcome page loaded.
+- Connected to the existing MySQL 9.6.0 server through MySQL Workbench.
+- Created the `hanziflow` database using `utf8mb4` to support Chinese characters.
+- Created a dedicated `hanziflow_app` database account with permissions limited to the project database.
+- Installed Homebrew and the MySQL client build tools needed for the Python database connector.
+- Installed `mysqlclient` 2.3.0 and verified that Python could load it.
+- Configured Django to connect to MySQL, reading the database password from an environment variable.
+- Created the `accounts` Django app and a custom `User` model based on Django’s `AbstractUser`.
+- Generated and applied database migrations successfully.
+- Created a superuser account and verified administrator login.
+- Registered the custom user model in Django’s administration interface and confirmed that it appeared.
+- Created a Git repository specifically inside the HanziFlow folder after discovering that Git was initially detecting a repository in the home directory.
+- Added a `.gitignore` to exclude the virtual environment, local credentials, and generated files.
+- Created `requirements.txt` to record installed Python packages.
+- Staged and reviewed the initial project files.
+
+## Issues Resolved
+- The database connector initially failed to install because `pkg-config` was missing. Installing Homebrew and the required build tools resolved the issue.
+- Django initially could not find the custom `User` model because the saved model file still contained starter code. Updating and saving the file resolved the error.
+- Git initially listed personal folders outside the project. Initializing a repository directly inside HanziFlow established the correct project boundary.
+
+## Concepts Practiced
+- Python virtual environments and package installation.
+- Django projects, apps, models, and migrations.
+- MySQL databases, database accounts, and permissions.
+- Environment variables for keeping passwords out of source code.
+- Django administration and superuser accounts.
+- Git repositories, ignored files, staging, and dependency tracking.
+
+## Current Status
+The local Django application runs, connects to MySQL, and supports administrator login. The project foundation is ready for feature development. The custom user model currently retains Django’s default username login; email login still needs implementation.
+
+## Next Steps
+- Add the existing repository to GitHub Desktop.
+- Create the first commit and publish the repository to GitHub.
+- Document how to activate the environment, set the database password, and start the server.
+- Begin building HanziFlow’s character and deck models.
